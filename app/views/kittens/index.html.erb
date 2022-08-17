@@ -5,7 +5,10 @@
 <div id="kittens">
   <ul>
     <% @kittens.each do |kitten| %>
-      <li><%= link_to "#{kitten.name}", kitten %></li>
+      <li>
+        <%= link_to "#{kitten.name}", kitten %>
+        <%= button_to "delete #{kitten.name}", kitten, method: :delete %>
+      </li>
     <% end %>
   </ul>
 </div>
