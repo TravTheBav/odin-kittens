@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Kittens</h1>
+
+<div id="kittens">
+  <ul>
+    <% @kittens.each do |kitten| %>
+      <li><%= link_to "#{kitten.name}", kitten %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "New kitten", new_kitten_path %>
